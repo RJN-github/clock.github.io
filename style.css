@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(46, 45, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-image: url("./tumblr_oivvxcPkyz1tf8vylo1_1280.jpg");
+    background-position: center;
+    height: 50%;
+    width: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    height: 50%;
+    width: 80%;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock::before {
+    content: 'Clock By RJN';
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+}
+
+.hours {
+    position: relative;
+}
+
+.hours::after {
+    content: 'Hrs';
+    display: block;
+    position: absolute;
+    top: 70px;
+    font-size: 20px;
+}
+
+.minutes {
+    position: relative;
+}
+
+.minutes::after {
+    content: 'Mins';
+    display: block;
+    position: absolute;
+    top: 70px;
+    font-size: 20px;
+}
+
+.seconds {
+    position: relative;
+}
+
+.seconds::after {
+    content: 'Secs';
+    display: block;
+    position: absolute;
+    top: 70px;
+    font-size: 20px;
+}
+
+.date {
+    margin-right: 30px;
+    font-size: 30px;
+    position: relative;
+}
+
+.day1 {
+    position: absolute;
+    font-size: 20px;
+    top: 60px;
+    right: 60px;
+}
+
+.time {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width : 1200px) {
+
+    .container {
+        height: 70%;
+        width: 60%;
+    }
+
+    .clock {
+        height: 80%;
+        position: relative;
+    }
+
+    .date {
+        position: absolute;
+        top: 30%;
+        margin: 0;
+        gap: 20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .day1 {
+        right: inherit;
+    }
+
+    .time {
+        position: absolute;
+        bottom: 30%;
+        font-size: 20px;
+        gap: 15px;
+    }
+
+    .hours::after {
+        font-size: 15px;
+    }
+
+    .minutes::after {
+        font-size: 15px;
+    }
+
+    .seconds::after {
+        font-size: 15px;
+    }
+}

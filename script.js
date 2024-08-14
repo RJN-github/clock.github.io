@@ -1,0 +1,20 @@
+const hrs = document.querySelector(".hours")
+const mins = document.querySelector(".minutes")
+const secs = document.querySelector(".seconds")
+const day1 = document.querySelector(".day1")
+const dayname = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const monthname = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const day = document.querySelector(".day")
+const month = document.querySelector(".month")
+const year = document.querySelector(".year")
+setInterval(() => {
+    let time = new Date()
+    hrs.innerHTML = (time.getHours() < 10 ? "0" : "") + time.getHours()
+    mins.innerHTML = (time.getMinutes() < 10 ? "0" : "") + time.getMinutes()
+    secs.innerHTML = (time.getSeconds() < 10 ? "0" : "") + time.getSeconds();
+}, 1000);
+let time = new Date()
+day.innerHTML = time.getDate()
+month.innerHTML = monthname[(time.getMonth())]
+year.innerHTML = time.getFullYear()
+day1.innerHTML = dayname[time.getDay()]
